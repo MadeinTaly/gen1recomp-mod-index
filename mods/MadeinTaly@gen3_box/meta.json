@@ -1,0 +1,17 @@
+{
+  "id": "gen3_box",
+  "title": "Gen 3 Box",
+  "author": "MadeinTaly",
+  "version": "1.3.0",
+  "categories": ["UI"],
+  "repo": "https://github.com/MadeinTaly/gen1recomp-gen3-boxes",
+  "github": "MadeinTaly/gen1recomp-gen3-boxes",
+  "summary": "A Ruby/Sapphire-style box screen: a grid you can see, and a cursor that carries a Pokemon.",
+  "tags": ["ui", "storage", "quality-of-life", "boxes"],
+  "permissions": ["engine_internals"],
+  "api": 2,
+  "profile": "content",
+  "game_version": ">=0.0.0-0 <2.0.0",
+  "license": "MIT",
+  "automatic_version_check": true
+}

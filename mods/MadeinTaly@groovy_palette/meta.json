@@ -1,0 +1,17 @@
+{
+  "id": "groovy_palette",
+  "title": "Groovy Palette",
+  "author": "MadeinTaly",
+  "version": "0.2.0",
+  "categories": ["ART"],
+  "repo": "https://github.com/MadeinTaly/gen1recomp-groovy-palette",
+  "github": "MadeinTaly/gen1recomp-groovy-palette",
+  "summary": "Thirty more COLORS palettes: Amiga, C64, Virtual Boy, rainbow, fuchsia, vaporwave.",
+  "tags": ["cosmetic", "ui", "palette", "retro"],
+  "permissions": ["engine_internals"],
+  "api": 2,
+  "profile": "content",
+  "game_version": ">=0.0.0-0 <2.0.0",
+  "license": "MIT",
+  "automatic_version_check": true
+}
