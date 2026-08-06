@@ -1,0 +1,17 @@
+{
+  "id": "childhood_myths_are_real",
+  "title": "Childhood Mythos Are Real",
+  "author": "MadeinTaly",
+  "version": "0.1.0",
+  "categories": ["CONTENT", "GAMEPLAY"],
+  "repo": "https://github.com/MadeinTaly/gen1recomp-childhood-myths-are-real",
+  "github": "MadeinTaly/gen1recomp-childhood-myths-are-real",
+  "summary": "The playground legends, made true: Mew under the truck, a ghost in the tower that can be caught, a garden behind Bill's house, and an S.S. Anne that comes back.",
+  "tags": ["secrets", "exploration", "myths", "content", "mew"],
+  "permissions": ["engine_internals"],
+  "api": 2,
+  "profile": "content",
+  "game_version": ">=0.0.0-0 <2.0.0",
+  "license": "MIT",
+  "automatic_version_check": true
+}
