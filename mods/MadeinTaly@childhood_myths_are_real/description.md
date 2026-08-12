@@ -18,6 +18,13 @@ than the mod tells you in game. **Nothing announces itself.** There is no
 list of what you have found, no marker for what you have not, and no menu
 entry that lights up. Each of the four has its own switch under `OPTIONS`.
 
+**The Kid.** He stands two tiles down the dock from the truck — the one
+every playground had, who had heard all the rumours and would tell you which
+one you had not gotten round to yet. Talk to him with nothing found and he
+repeats one rumour at random, in playground language. Prove some of the four
+and he keeps score of what is left. Prove all four and he hands you a fifth,
+one final time.
+
 **It is safe to remove.** Saving inside a myth writes you home in Pallet
 Town instead — so turning the mod off never corrupts the save. Every Pokémon
 it can give you is one the base game already has; it registers no new

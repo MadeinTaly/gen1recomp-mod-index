@@ -16,13 +16,17 @@ the fastest answer to what you are still short of.
 
 **It does not replace the species page.** Pressing A opens the engine's own
 `DexEntryMenu`, so a mod that adds pages there — Useful Dex, for instance —
-keeps working, and its pages are one press further in. The two stack rather
-than conflict.
+keeps working. The two stack rather than conflict.
 
 **GRID BIG** asks the renderer for a 320×288 surface, which is what lets a
 56×56 battle picture draw at scale 1 rather than halved. GRID CLASSIC keeps
-the Game Boy screen, in greyscale: a 28-pixel cell is three and a half
-tiles and a palette zone must be tile-aligned.
+the Game Boy screen.
+
+**CLASSIC and Wilds of Kanto.** With the `overworld_wild_spawns` mod
+installed and enabled, CLASSIC draws its 16×16 per-species overworld sprites
+instead of the halved battle pictures — 16 pixels fits that cell whole. A
+never-met species stays a blank regardless; seen-but-not-caught keeps its
+dimming. BIG is untouched: at 56 a picture already draws at scale 1.
 
 **What it does not do:** it does not make the Pokémon sharper — the
 pictures are the game's own art and cannot be redrawn, so the larger

@@ -2,7 +2,7 @@
 
 Gen 1's PC shows twenty names in a list, and moving a Pokémon between boxes
 means withdrawing it, changing box, and depositing it again. This is the
-Ruby/Sapphire answer to that.
+Ruby/Sapphire answer to that — and it works on both Red/Blue and Gold.
 
 A 5×4 grid of the current box. **A** picks a Pokémon up and **A** puts it
 down, swapping with whatever is already in the slot. **START** opens its
@@ -23,7 +23,7 @@ immediately. The vanilla box PC is left in place either way.
 ## GRID: BIG
 
 `BIG` asks the renderer for a **320×288** surface instead of the Game Boy's
-160×144. Two things follow from that:
+160×144, which lets two things happen:
 
 **Battle pics draw at scale 1.** A front pic is 56×56 and the cell is now
 56 pixels, so every pixel of the sprite is one pixel of the canvas — not
@@ -31,32 +31,32 @@ halved, not stretched.
 
 **Every Pokémon wears its own colours.** 56 is seven tiles exactly, and a
 palette zone is addressed in tiles, so each cell carries that species' own
-palette — the same table the summary screen and the battle use. Charmander
-orange, Bulbasaur green, Gengar purple, all at once. The Game Boy could show
-four palettes on a screen; this shows twenty-one.
+palette. Charmander orange, Bulbasaur green, Gengar purple, all at once.
 
-`CLASSIC` can do neither: a 28-pixel cell is three and a half tiles, and
-half a tile cannot carry a zone.
+`BIG` is `CLASSIC` on Gold: Gold's renderer scales one Game Boy canvas and
+does not expose the surface-size and palette-zone seams `BIG` is built on.
+The OPTIONS row says so, and nothing changes for a Gen 1 save.
 
 ## BOX HEALS
 
 Off by default. Turn it on and closing the box screen rests everything in
-storage — full HP, status cleared, every move's PP back. It uses the same
-routine as the Pokémon Centre (`Pokemon.heal`), runs once when you close
-rather than on each placement, and covers every box — not only the one you
-were looking at. The party is untouched.
+storage — full HP, status cleared, every move's PP back. Runs once when you
+close, covers every box, leaves the party untouched.
+
+## Gold
+
+Gold's storage is **fourteen boxes** of 20. The screen reads `Boxes.COUNT`
+and `Boxes.CAPACITY` rather than spelling either number, so the wider grid,
+JUMP TO BOX, FIND and the box ring all widened on their own. MAIL is
+respected: a party Pokémon holding a letter cannot be picked up or displaced.
 
 ## Why the grid uses battle pics
 
 Gen 3's grid works because every species has its own icon. Gen 1 has no such
-thing: the icon table maps a species to one of a handful of shapes and the
-whole game carries four icon images, so a grid of those would be twenty
-identical blobs. The grid draws each Pokémon's front pic at exactly half
-scale instead — an integer divisor keeps two-bit pixel art crisp, and the
-arithmetic fits: five columns of 28 is 140 across a 160-wide screen.
-
-They are read through the engine's `Assets.image`, the same seam a sprite
-mod shadows, so an animated-sprite mod's art shows up in this grid too.
+thing — its icon table maps a species to one of four shapes. The grid draws
+each Pokémon's front pic at exactly half scale instead. Those pictures are
+read through the engine's `Assets.image`, so an animated-sprite mod's art
+shows up in this grid too.
 
 ## Safety
 

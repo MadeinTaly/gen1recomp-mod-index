@@ -1,4 +1,4 @@
-# Four fixes Gen 1 never got
+# Six fixes Gen 1 never got
 
 **Beta.** Every piece switches on its own, and the ones that move the
 balance are off until you turn them on.
@@ -9,46 +9,45 @@ balance are off until you turn them on.
 | `TYPE CHART` | `GEN 1` | the three rows Gen 2 rebalanced |
 | `GHOST FIX` | **on** | Ghost 0x → 2x against Psychic |
 | `SMART AI` | off | the type pass multiplies both defender types |
+| `QUIRK FIXES` | off | five Gen 1 battle accidents fixed as a ruleset |
+| `BADGE BOOSTS` | **on** | the ×9/8 stat boost per badge (vanilla); off drops it |
 | `ATLAS` | on | a screen for what lives where |
 
-`SPLIT` and `TYPE CHART` are load-time registry patches, so changing them
-takes effect on the next launch rather than mid-battle.
+`SPLIT`, `TYPE CHART` and `QUIRK FIXES` are load-time registry patches, so
+changing them takes effect on the next launch rather than mid-battle.
 
 ## SPLIT — the Gen 4 move split
 
-Gen 1 takes the category from the TYPE: every Water move is special, every
-Normal move physical. So Gyarados — 125 Attack, 60 Special — throws Hydro
-Pump off the wrong stat, and Hitmonchan cannot meaningfully use its
-elemental punches.
+In Gen 1 the category comes from the type. Every Water move is special
+because Water is a special type; every Normal move is physical. So Gyarados
+— **125 Attack, 60 Special** — throws Hydro Pump off the wrong stat, and
+Hitmonchan cannot meaningfully use its elemental punches at all.
 
-The engine already supports the per-move answer; Gen 1 just never fills the
-field. `Damage.categoryOf` reads "the move's own category field wins, then
-the merged type record's". So this is 17 registry patches — pure data, no
-damage hook — and it composes with anything else that touches a battle.
+The engine already supports the per-move answer. Gen 1 simply never fills the
+move's own field. So this ships as **18 registry patches** — pure data, no
+damage hook — and it composes with any other mod that touches a battle.
 
 ## GHOST FIX — on by default, on its own switch
 
 Ghost was meant to be strong against Psychic. The games say so, Sabrina's
-gym is built as though it were true, and the shipped table says `0x`. Gen
-1's only Ghost moves sit on Poison-typed Pokémon, which Psychic resists, so
-Psychic ends the generation with no counterplay at all.
-
-That is a bug, so it is on by default and separate from TYPE CHART. The
-other three rows — Bug/Poison, Poison/Bug, Ice/Fire — are Gen 2 rebalancing
-a working table, which is a matter of taste. All four were read out of the
-decoded chart, and a test asserts the ROM still says what the mod claims.
+gym is built as though it were true, and the shipped table says `0x`. That
+is a bug, so it is on by default and separate from TYPE CHART, which covers
+the three rows Gen 2 deliberately rebalanced.
 
 ## SMART AI — a fix, not an addition
 
-Registering a new AI layer does nothing: TrainerAI walks the trainer class's
-own list of layers, so an id nobody references never runs. This patches
-LAYER_3, the vanilla type pass, whose own comment admits it "only reads the
-FIRST matching row — no dual-type product". That is why a trainer throws
-Earthquake at a Pidgey: it sees the 2x against Rock and never reaches the
-Flying immunity. This multiplies them out.
+This patches `LAYER_3`, the vanilla type pass, whose own comment admits it
+"only reads the FIRST matching row — no dual-type product". That is why a
+trainer throws Earthquake at a Pidgey: it sees the 2x against Rock and never
+reaches the Flying immunity. This multiplies them out.
 
-It still only nudges scores; vanilla's other passes run untouched, so a
-trainer keeps its personality and simply stops firing Water Gun at Gyarados.
+## QUIRK FIXES
+
+Five Gen 1 battle rules that were accidents rather than decisions, registered
+as a **ruleset** record: the 1/256 miss, Focus Energy quartering the critical
+rate instead of multiplying it, criticals ignoring stat stages, enemy Pokémon
+never spending PP, and Hyper Beam skipping its recharge on a KO. Registering
+it also lists it in the game's own **OPTIONS → ruleset** row.
 
 ## ATLAS — what lives where, and what you still need
 
