@@ -2,17 +2,17 @@
   "version": 1,
   "failing": {
     "DarioMelo@Music_FRLG": {
-      "strikes": 2,
+      "strikes": 3,
       "since": "2026-08-21T01:12:44.072Z",
       "reason": "github \"DarioMelo/Gen1Recomp-MusicMods\" returned 404 — deleted, renamed away, or made private"
     },
     "DarioMelo@Music_HGSS": {
-      "strikes": 2,
+      "strikes": 3,
       "since": "2026-08-21T01:12:44.073Z",
       "reason": "github \"DarioMelo/Gen1Recomp-MusicMods\" returned 404 — deleted, renamed away, or made private"
     },
     "DarioMelo@Music_LGPE": {
-      "strikes": 2,
+      "strikes": 3,
       "since": "2026-08-21T01:12:44.073Z",
       "reason": "github \"DarioMelo/Gen1Recomp-MusicMods\" returned 404 — deleted, renamed away, or made private"
     }
