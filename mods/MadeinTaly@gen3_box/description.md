@@ -15,7 +15,11 @@ you deposit and withdraw. Walking off the left or right edge changes box.
 | `OPEN FROM` | `START+PC` / `START` / `PC` | where the BOXES entry appears |
 | `CURSOR WRAP` | on / off | whether the cursor wraps at the edges |
 | `BOX HEALS` | on / off | rest everything in storage when the screen closes |
-| `GRID` | `CLASSIC` / `BIG` | 320×288 surface, full-size pics, and a palette per Pokémon |
+| `GRID` | `CLASSIC` / `BIG` | 320×288 surface, full-size pics, and a palette per Pokémon (Gen 1 only; the row is not shown on Gold) |
+| `WALLPAPER` | a scene, and a hand | in the BOX MENU: up/down changes the place, left/right changes the artist |
+| `SLOTS` | `CLEAR` … `80%` | how opaque each cell is over the wallpaper |
+| `BANDS` | `SOLID` … `15%` | how much of the title row and the footer the scene gets |
+| `ANIMATE` | on / off | whether the wallpaper drifts |
 
 `OPEN FROM` is read each time a menu opens, so changing it takes effect
 immediately. The vanilla box PC is left in place either way.
@@ -35,7 +39,33 @@ palette. Charmander orange, Bulbasaur green, Gengar purple, all at once.
 
 `BIG` is `CLASSIC` on Gold: Gold's renderer scales one Game Boy canvas and
 does not expose the surface-size and palette-zone seams `BIG` is built on.
-The OPTIONS row says so, and nothing changes for a Gen 1 save.
+The row is simply not shown on that boot, and nothing changes for a Gen 1
+save.
+
+## Wallpapers: twelve places, fifteen hands
+
+Every box wears a scene, and every scene has more than one hand on it. SEA,
+FOREST, SKY, CAVE, CITY, SNOW, NIGHT, DESERT, VOLCANO, SPACE, CASTLE and
+90S are each drawn here in code — that is the `GEN3 BOX` entry — and then
+drawn again by pixel artists whose work is CC0 or CC BY: ansimuz, Admurin,
+FabinhoSC, DustDFG, MatiasVME, Scribe, leyren, Emcee Flesher, Tio Aimar,
+TheClicketyBoom, Jetrel, GrumpyDiamond, Fupi and LLGD.
+
+In the chooser, up and down change the place and left and right change the
+hand, and the box behind the menu wears whatever the cursor is on — the menu
+**is** the preview. `SELECT` keeps one as a favourite, and the FAVOURITE
+scene wears what you kept. Each box remembers its own pair.
+
+Whether a layer moves is measured rather than guessed: the mean difference
+between a layer's first and last column says whether it continues into
+itself, so clouds and water drift while buildings and rock hold still. A
+still layer is not a dead one — it pans slowly across whatever width it has
+spare and turns back before the join could show.
+
+**The list is open.** One pull request, one wallpaper, and the artist's name
+becomes the label players scroll through: see CONTEST.md in the repository.
+The check on the pull request measures every layer and tells you which of
+them the box will let move.
 
 ## BOX HEALS
 
