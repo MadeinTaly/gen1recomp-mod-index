@@ -2,22 +2,21 @@
   "id": "gen3_box",
   "title": "Gen 3 Box",
   "author": "MadeinTaly",
-  "version": "1.8.0",
+  "version": "1.11.0",
   "categories": [
     "UI",
     "QOL"
   ],
   "repo": "https://github.com/MadeinTaly/gen1recomp-gen3-boxes",
   "github": "MadeinTaly/gen1recomp-gen3-boxes",
-  "summary": "A Gen 3-style storage screen: a 5x4 grid, a cursor that picks a Pokemon up and puts it down, and one button between box and party. Runs on Gold too.",
+  "summary": "A Gen 3-style storage screen: a 5x4 grid, a cursor that picks a Pokemon up and puts it down, and twelve wallpapers drawn by fifteen hands.",
   "tags": [
     "boxes",
     "storage",
     "pc",
     "qol",
     "ui",
-    "gold",
-    "gen-2"
+    "wallpapers"
   ],
   "permissions": [
     "engine_internals"
