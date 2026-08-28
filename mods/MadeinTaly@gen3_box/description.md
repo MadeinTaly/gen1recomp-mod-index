@@ -42,14 +42,18 @@ does not expose the surface-size and palette-zone seams `BIG` is built on.
 The row is simply not shown on that boot, and nothing changes for a Gen 1
 save.
 
-## Wallpapers: twelve places, fifteen hands
+## Wallpapers: sixteen places, ninety-one of them
 
-Every box wears a scene, and every scene has more than one hand on it. SEA,
-FOREST, SKY, CAVE, CITY, SNOW, NIGHT, DESERT, VOLCANO, SPACE, CASTLE and
-90S are each drawn here in code — that is the `GEN3 BOX` entry — and then
-drawn again by pixel artists whose work is CC0 or CC BY: ansimuz, Admurin,
-FabinhoSC, DustDFG, MatiasVME, Scribe, leyren, Emcee Flesher, Tio Aimar,
-TheClicketyBoom, Jetrel, GrumpyDiamond, Fupi and LLGD.
+Every box wears a scene, and **no scene has fewer than five wallpapers
+behind it**. SEA, FOREST, SKY, CAVE, CITY, SNOW, NIGHT, DESERT, VOLCANO,
+SPACE, CASTLE, SAKURA, STORM, CIRCUIT, TRAIN and 90S are each drawn here in
+code — that is the `GEN3 BOX` entry — then drawn again by pixel artists
+whose work is CC0 or CC BY (ansimuz, Admurin, FabinhoSC, DustDFG, MatiasVME,
+Scribe, leyren, Emcee Flesher, Tio Aimar, TheClicketyBoom, Jetrel,
+GrumpyDiamond, LLGD, PWL, JonathanPalmerGD, fridaruiz, tigitalart,
+rubberduck, Cethiel, bevouliin.com, Rawdanitsu, Bonsaiheldin, Screaming
+Brain Studios, Reactorcore), and then again here through other palettes —
+`SAKURA < GEN3 NIGHT >` is a night hanami, not a toggle.
 
 In the chooser, up and down change the place and left and right change the
 hand, and the box behind the menu wears whatever the cursor is on — the menu
