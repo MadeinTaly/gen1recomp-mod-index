@@ -1,4 +1,20 @@
 {
   "version": 1,
-  "failing": {}
+  "failing": {
+    "Roxas2712@deutsch": {
+      "strikes": 1,
+      "since": "2026-10-09T04:42:37.109Z",
+      "reason": "github \"Roxas2712/pokemon-rot-deutsch-mod\" returned 404 — deleted, renamed away, or made private"
+    },
+    "Roxas2712@deutsch-blau": {
+      "strikes": 1,
+      "since": "2026-10-09T04:42:37.109Z",
+      "reason": "github \"Roxas2712/pokemon-blau-deutsch-mod\" returned 404 — deleted, renamed away, or made private"
+    },
+    "Roxas2712@deutsch-gelb": {
+      "strikes": 1,
+      "since": "2026-10-09T04:42:37.109Z",
+      "reason": "github \"Roxas2712/pokemon-gelb-deutsch-mod\" returned 404 — deleted, renamed away, or made private"
+    }
+  }
 }
