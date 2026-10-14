@@ -102,9 +102,9 @@
   },
   "held": {
     "AverageConsumer@kanto_gear": {
-      "version": "4.1.0",
-      "reason": "phone/display.lua:31 require(\"socket\") needs \"network\" in the entry's permissions",
-      "at": "2026-10-13T22:18:54.798Z"
+      "version": "4.1.1",
+      "reason": "phone/display.lua:32 require(\"socket\") needs \"network\" in the entry's permissions",
+      "at": "2026-10-14T03:40:03.224Z"
     }
   }
 }
